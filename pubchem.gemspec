@@ -21,11 +21,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "mechanize", "~> 2.7.3"
-  spec.add_runtime_dependency "nokogiri", "~> 1.6.6.2"
-  spec.add_runtime_dependency "fuzzy-string-match", "~> 0.9.7"
-  spec.add_runtime_dependency "ox", "~> 2.2.1"
-
-  spec.add_development_dependency "bundler", "~> 1.10"
-
+  spec.add_runtime_dependency "mechanize", "> 2.7.3"
+  spec.add_runtime_dependency "nokogiri", "~> 1.16" # Nokogiri should always be the latest
+  spec.add_runtime_dependency "fuzzy-string-match", "> 0.9.7" # 1.0 came out in 2017
+  spec.add_runtime_dependency "ox", "> 2.2.1" # 2.14.x is latest
 end
